@@ -10,6 +10,7 @@ from threading import Thread
 from pindle import pindle_script
 from pindle import nihlathak_portal_search
 
+#edit: 32/25/2025 restarting project
 #removable code:
 pos_count = 0
 neg_count = 0
