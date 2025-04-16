@@ -25,3 +25,7 @@ print(end - start)
 
 8/22/2024
 Left off at 11:00 minute 
+
+INSTALLATION:
+pip install opencv-python
+pip install pywin32

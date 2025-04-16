@@ -110,13 +110,13 @@ while(True):
     screenshot = wincap.get_screenshot()
     output_image = screenshot.copy()
     #object Detection, will look at screenshot and return list of rectangles where obj is found
-    #rectangles = cascade_zombie.detectMultiScale(screenshot)
+    rectangles = cascade_zombie.detectMultiScale(screenshot)
     #draw detection results onto original image:
-    #detection_image = vision_zombie.draw_rectangles(screenshot, rectangles)
+    detection_image = vision_zombie.draw_rectangles(screenshot, rectangles)
 
-    #rectangles = minor_hp_pot.find(screenshot, 0.40)
-    #hpots = HP1.find(screenshot,0.95)
-    #output_image = HP1.draw_rectangles(screenshot,rectangles)
+    # rectangles = minor_hp_pot.find(screenshot, 0.40)
+    # hpots = HP1.find(screenshot,0.95)
+    # output_image = HP1.draw_rectangles(screenshot,rectangles)
 
 
     if health <= 80:
@@ -136,11 +136,11 @@ while(True):
         frame_counter = 0
 
     #tg = Vision_minor_mana_pot.get_click_points(mpots)
-    cv.imshow('Matches', output_image)
+    #cv.imshow('Matches', output_image)
 
     #display the processed image
-        #cv.imshow('Processed Image', processed_image) #processed image window
-    #cv.imshow('Matches', detection_image)
+    #cv.imshow('Processed Image', processed_image) #processed image window
+    cv.imshow('Matches', detection_image)
 
     # take bot actions
     if not is_bot_in_action:
